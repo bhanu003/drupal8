@@ -1,0 +1,18 @@
+for /f %%x in (list.txt) do (
+    start "" "C:\Program Files\Notepad++\notepad++" "%%x"
+    )
+	
+	
+	
+========================
+
+@echo off
+setlocal enableextensions enabledelayedexpansion
+
+set LIST=
+for /f %%x in (list.txt) do (
+    set LIST=!LIST! "%%x"
+    )
+    echo %LIST%
+
+"C:\Program Files\Notepad++\notepad++" %LIST%	
